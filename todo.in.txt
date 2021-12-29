@@ -1,0 +1,10 @@
+a Walk the dog
+a Wash the dishes
+a Bake a cake
+a Do the laundry
+t 1
+t 2
+t 3
+t 1
+c
+q
