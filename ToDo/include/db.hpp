@@ -1,7 +1,9 @@
 #pragma once
+#include <istream>
+#include <ostream>
 #include <string>
-#include <vector>
 #include <utility>
+#include <vector>
 
 struct Item {
 	std::string description;
@@ -19,4 +21,6 @@ public:
 
 	void addItem(std::string description);
 	void eraseCompleted();
+	void deserialize(std::istream& in);
+	void serialize(std::ostream& out) const;
 };

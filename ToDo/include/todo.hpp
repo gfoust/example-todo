@@ -1,5 +1,7 @@
 #include "types.hpp"
 #include "db.hpp"
+#include <istream>
+#include <ostream>
 #include <utility>
 
 struct ToDo {
@@ -13,5 +15,14 @@ struct ToDo {
 	template <typename T>
 	Result operator()(T&& cmd) {
 		return execute(std::forward<T>(cmd));
+	}
+
+	Result load(std::istream& in) {
+		db.deserialize(in);
+		return SuccessResult{ db };
+	}
+
+	void store(std::ostream& out) const {
+		db.serialize(out);
 	}
 };

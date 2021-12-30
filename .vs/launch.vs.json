@@ -6,16 +6,15 @@
       "type": "default",
       "project": "CMakeLists.txt",
       "projectTarget": "todo.exe (ToDo\\todo.exe)",
-      "name": "todo.exe (ToDo\\todo.exe)"
+      "name": "todo.exe"
     },
     {
       "type": "default",
       "project": "CMakeLists.txt",
       "projectTarget": "todo.exe (ToDo\\todo.exe)",
-      "name": "todo.exe (redirect IO)",
+      "name": "todo.exe (with data file)",
       "args": [
-        "<\"${ProjectDir}\\todo.in.txt\"",
-        ">\"${ProjectDir}\\output.txt\""
+        "\"${ProjectDir}\\data.txt\""
       ]
     }
   ]
